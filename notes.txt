@@ -1,0 +1,12 @@
+in order to have the same importing system in backend like in the frontend e.g import something from 'something', we need following line to be added in package.json file
+"type": "module",   ---> it should be added below "main": "index.js",
+
+
+
+Constants (khaali dabbay) --> reducer (factory) + action (machines of factory used to prepare the product) --> store.js (normal store in market)
+
+It is imp for us to install dotenv and write a code for it in app.js in order to make the .env file work
+
+
+morgan - login detector
+

@@ -1,0 +1,50 @@
+Container ---> centers everything which is present inside it
+className='ml-auto' ----> moves to left
+className='mr-auto' ----> moves to right
+className='text-center' ---> center the text
+
+
+in order to use and implement Redux, we need to install following:
+redux, react-redux, redux-thunk, redux-devtools-extension
+
+<Col sm={12} md={6} lg={4} xl={3}>  
+// sm -> meaning that jb screen small ho toh aap kitne space lena chaho gy
+// md -> meaning that jb screen medium ho toh aap kitne space lena chaho gy
+// lg -> meaning that jb screen large ho toh aap kitne space lena chaho gy
+// xl -> meaning that jb screen extra-large ho toh aap kitne space lena chaho gy
+
+
+
+for font-awesome, we go to cdn.js, search font awesome and then copy the first link tag and paste it inside the index.html (right above the title tag)
+
+
+
+for implementing routing with boostrap component, simply wrap the NavLinks with LinkContainers having to='' inside it 
+for general routing, first replace a tags with Link tags and then go to main (root) file and use the Route tag to link to a certain page/component
+
+The following code create a table link structure. Adding variant='flush' removes the outer boundaries of this table leaving only horizontal lines behind
+
+<LinkGroup>
+    <LinkItem>
+
+    </LinkItem>
+     <LinkItem>
+        
+    </LinkItem>
+     <LinkItem>
+        
+    </LinkItem>
+</LinkGroup>
+
+<Route path='/cart/:id?' component={CartScreen} />  // ? after :id makes the :id optional
+
+
+for calling action, we use 'useDispatch' and for bringing something in the component, use 'useSelector'
+
+
+avoid these {/* */} kind of comments
+
+
+when we are sending a token (header containing Authorization and stuff), we use getState as a second argument to dispatch
+
+// 'Content-Type': 'application/json', // use it only when making a post request
