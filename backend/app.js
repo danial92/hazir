@@ -1,11 +1,12 @@
 import path from 'path'
 import express from "express"
 const app = express();
-import "./db/db.js";
+import database from "./db/db.js";
 import { notFound, errorHandler } from './middleware/errorMiddleware.js';
 import dotenv from "dotenv";
 dotenv.config();
 
+database()
 
 app.use(express.json());
 
