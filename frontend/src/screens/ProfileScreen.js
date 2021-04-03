@@ -10,8 +10,6 @@ import { getMyOrdersAction } from '../actions/orderActions'
 const ProfileScreen = ({ history }) => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [confirmPassword, setConfirmPassword] = useState('')
   const [message, setMessage] = useState(null)
 
 
@@ -46,11 +44,7 @@ const ProfileScreen = ({ history }) => {
 
   const submitHandler = (e) => {
     e.preventDefault()
-    if (password !== confirmPassword) {
-        setMessage('Passwords do not match')
-      } else {
-        dispatch(updateProfileAction({ id: user._id, name, email, password }))
-      }
+        dispatch(updateProfileAction({ id: user._id, name, email }))
   }
   
   return (
@@ -78,26 +72,6 @@ const ProfileScreen = ({ history }) => {
                     placeholder='Enter email'
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                ></Form.Control>
-                </Form.Group>
-
-                <Form.Group controlId='password'>
-                <Form.Label>Password</Form.Label>
-                <Form.Control
-                    type='password'
-                    placeholder='Enter password'
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                ></Form.Control>
-                </Form.Group>
-
-                <Form.Group controlId='confirmPassword'>
-                <Form.Label>Confirm Password</Form.Label>
-                <Form.Control
-                    type='confirmPassword'
-                    placeholder='Enter Confirm Password'
-                    value={confirmPassword}
-                    onChange={(e) => setConfirmPassword(e.target.value)}
                 ></Form.Control>
                 </Form.Group>
 

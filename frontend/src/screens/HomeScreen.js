@@ -27,10 +27,11 @@ const HomeScreen = ({ match }) => {
     return (
         <div className='home'>
             <HelmetTitles />
-            {!keyword ? <ProductsCarousel /> : <Link to='/' className='btn btn-primary'>Go to Main Page</Link>}
+            {!keyword && (products && products.length > 20) ? (<div><h2 style={{ textAlign: 'center' }}>Top Products</h2> <ProductsCarousel /></div>) : keyword && <Link to='/' className='btn btn-primary'>Go to Main Page</Link>}
             {
                 loading ? <Loader /> : error ? <Message /> :
             <> 
+            <h2 style={{ textAlign: 'center', marginTop: '28px' }}>Our Products</h2>
             <Row>
                     {products.map(product => (
                         <Col key={product._id} sm={12} md={6} lg={4} xl={3}> 

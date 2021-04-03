@@ -7,14 +7,14 @@ const ProductLayout = ({ product }) => {
     return (
         <div>
             <Card className='my-3 py-2 px-2' style={{ width: '18rem' }}>
-                <Link to={`/product/${product._id}`}>
-                    <Card.Img variant="top" src={product.image} />
-                </Link>
+                    <Link to={`/product/${product._id}`}>
+                        <Card.Img variant="top" src={product.image} />
+                    </Link>
                 <Card.Body>
                 <Link to={`/product/${product._id}`}>
-                    <Card.Title>{product.name}</Card.Title>
+                    <Card.Title style={{ color: 'black' }} >{product.name}</Card.Title>
                 </Link>
-                    <Card.Text>${product.price}</Card.Text>
+                    <Card.Text><strong>Price: </strong> ${product.price}</Card.Text>
                     <Card.Text>
                         <Rating value={product.rating} text={`${product.numReviews} reviews`} />
                     </Card.Text>

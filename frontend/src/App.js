@@ -29,7 +29,7 @@ function App() {
             <Route path='/register' component={RegisterScreen} />
             <Route path='/profile' component={ProfileScreen} />
             <Route path='/product/:id' component={ProductScreen} />
-            <Route path='/cart/:id?' component={CartScreen} /> {/* ? after :id makes the :id optional */}
+            <Route path='/cart/:id?' component={CartScreen} /> 
             <Route path='/admin/userlist' component={AdminUsersScreen} />
             <Route path='/admin/user/:id/edit' component={UserEditScreen} />
             <Route path='/admin/productlist' component={AdminProductsScreen} exact />
@@ -37,10 +37,10 @@ function App() {
             <Route path='/admin/product/:id/edit' component={ProductEditScreen} />
             <Route path='/admin/orderlist' component={AdminOrdersScreen} />
             <Route path='/search/:keyword' component={HomeScreen} exact />
-            <Route path='/page/:pageNumber' component={HomeScreen} exact /> {/* This is for different pages (keyword is not a shart here) */}
+            <Route path='/page/:pageNumber' component={HomeScreen} exact /> 
             <Route path='/order/:id' component={OrderScreen} />
             <Route path='/shipping' component={ShippingScreen} />
-            <Route path='/search/:keyword/page/:pageNumber' component={HomeScreen} exact/> {/* This is only if we have a keyword. */}
+            <Route path='/search/:keyword/page/:pageNumber' component={HomeScreen} exact/> 
             <Route path='/' component={HomeScreen} exact />
           </main>
       <Footer />
